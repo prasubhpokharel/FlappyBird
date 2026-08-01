@@ -27,3 +27,5 @@ constexpr unsigned int SCREEN_HEIGHT = 1024;
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.5f
 
+#define BIRD_ANIMATION_DURATION 0.4f
+

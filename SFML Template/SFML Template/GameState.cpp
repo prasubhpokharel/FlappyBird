@@ -20,6 +20,9 @@ namespace Flappy
 		this->_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 		this->_data->assets.LoadTexture("Land", LAND_FILEPATH);
 		this->_data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
+		this->_data->assets.LoadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
 
 		pipe = new Pipe(_data);
 		land = new Land(_data);
@@ -62,6 +65,8 @@ namespace Flappy
 
 			clock.restart();
 		}
+
+		bird->Animate(dt);
 	}
 
 	void GameState::Draw(float dt)
