@@ -44,8 +44,7 @@ namespace Flappy
 
 			if (this->_data->input.IsSpriteClicked(this->_background, sf::Mouse::Left, this->_data->window))
 			{
-				pipe->SpawnBottomPipe();
-				pipe->SpawnTopPipe();
+				bird->Tap();
 			}
 		}
 	}
@@ -67,6 +66,8 @@ namespace Flappy
 		}
 
 		bird->Animate(dt);
+
+		bird->Update(dt);
 	}
 
 	void GameState::Draw(float dt)

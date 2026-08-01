@@ -1,7 +1,7 @@
 #pragma once
 
-constexpr unsigned int SCREEN_WIDTH = 768;
-constexpr unsigned int SCREEN_HEIGHT = 1024;
+#define SCREEN_WIDTH 768
+#define SCREEN_HEIGHT 1024
 
 #define SPLASH_STATE_SHOW_TIME 0.0
 
@@ -23,9 +23,16 @@ constexpr unsigned int SCREEN_HEIGHT = 1024;
 #define BIRD_FRAME_3_FILEPATH "Resources/res/bird-03.png"
 #define BIRD_FRAME_4_FILEPATH "Resources/res/bird-04.png"
 
-
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.5f
 
 #define BIRD_ANIMATION_DURATION 0.4f
 
+#define BIRD_STATE_STILL 1
+#define BIRD_STATE_FALLING 2
+#define BIRD_STATE_FLYING 3
+
+#define GRAVITY 350.0f
+#define FLYING_SPEED 350.0f
+
+#define FLYING_DURATION 0.25f

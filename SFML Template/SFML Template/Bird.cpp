@@ -12,6 +12,13 @@ namespace Flappy
 		_animationFrames.push_back(this->_data->assets.GetTexture("Bird Frame 4"));
 
 		_birdSprite.setTexture(_animationFrames.at(_animationIterator));
+
+		_birdSprite.setPosition(
+			(_data->window.getSize().x / 4) - (_birdSprite.getGlobalBounds().width / 2),
+			(_data->window.getSize().y / 2) - (_birdSprite.getGlobalBounds().height / 2)
+		);
+
+		_birdState = BIRD_STATE_STILL;
 	}
 
 	Bird::~Bird()
@@ -40,5 +47,29 @@ namespace Flappy
 
 			_clock.restart();
 		}
+	}
+
+	void Bird::Update(float dt)
+	{
+		if (BIRD_STATE_FALLING == _birdState)
+		{
+			_birdSprite.move(0, GRAVITY * dt);
+		}
+		else if (BIRD_STATE_FLYING == _birdState)
+		{
+			_birdSprite.move(0, -FLYING_SPEED * dt);
+		}
+
+		if (_movementClock.getElapsedTime().asSeconds() > FLYING_DURATION)
+		{
+			_movementClock.restart();
+			_birdState = BIRD_STATE_FALLING;
+		}
+	}
+
+	void Bird::Tap()
+	{
+		_movementClock.restart();
+		_birdState = BIRD_STATE_FLYING;
 	}
 }
