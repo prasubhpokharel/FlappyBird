@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+
+# SFML unnecessary files
+External Libraries/SFML/doc/
+External Libraries/SFML/examples/
+External Libraries/SFML/test/
+External Libraries/SFML/tools/
+External Libraries/SFML/changelog.md
