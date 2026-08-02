@@ -76,7 +76,7 @@ namespace Flappy
 		// Position "Get Ready!" near the top half
 		_getReady.setPosition(
 			_data->window.getSize().x / 2.0f,
-			_data->window.getSize().y / 8.2f
+			_data->window.getSize().y / 9.0f
 		);
 
 		// Position "Tap Tap" message in the lower center area, safely clear of the HUD score
