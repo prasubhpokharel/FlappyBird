@@ -40,5 +40,7 @@ namespace Flappy
 		sf::RectangleShape _gameOverFlash;
 		bool _flashOn;
 
+		int _score;
+
 	};
 }
