@@ -8,6 +8,7 @@
 #include "Bird.hpp"
 #include "Collision.hpp"
 #include "Flash.hpp"
+#include "HUD.hpp"
 
 namespace Flappy
 {
@@ -32,6 +33,7 @@ namespace Flappy
 		Bird* bird;
 		Collision collision;
 		Flash* flash;
+		HUD* hud;
 
 		sf::Clock clock;
 

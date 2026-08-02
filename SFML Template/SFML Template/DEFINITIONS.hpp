@@ -25,6 +25,8 @@
 
 #define SCORING_PIPE_FILEPATH "Resources/res/InvisibleScoringPipe.png"
 
+#define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"
+
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.5f
 
@@ -43,6 +45,7 @@
 
 #define MIN_PIPE_OFFSET 80
 #define MAX_PIPE_OFFSET 260
+
 
 enum GameStates
 {
