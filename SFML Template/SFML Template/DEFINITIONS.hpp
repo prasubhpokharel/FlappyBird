@@ -23,6 +23,11 @@
 #define BIRD_FRAME_3_FILEPATH "Resources/res/bird-03.png"
 #define BIRD_FRAME_4_FILEPATH "Resources/res/bird-04.png"
 
+#define BRONZE_MEDAL_FILEPATH "Resources/res/Bronze-Medal.png"
+#define SILVER_MEDAL_FILEPATH "Resources/res/Silver-Medal.png"
+#define GOLD_MEDAL_FILEPATH "Resources/res/Gold-Medal.png"
+#define PLATINUM_MEDAL_FILEPATH "Resources/res/Platinum-Medal.png"
+
 #define SCORING_PIPE_FILEPATH "Resources/res/InvisibleScoringPipe.png"
 
 #define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"
@@ -59,3 +64,8 @@ enum GameStates
 #define FLASH_SPEED 1500.0f
 
 #define TIME_BEFORE_GAME_OVER_APPEARS 1.5f
+
+#define BRONZE_MEDAL_SCORE 0
+#define SILVER_MEDAL_SCORE 5
+#define GOLD_MEDAL_SCORE 25
+#define PLATINUM_MEDAL_SCORE 100

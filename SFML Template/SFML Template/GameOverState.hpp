@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "State.hpp"
 #include "Game.hpp"
+#include <fstream>
 
 namespace Flappy
 {
@@ -25,6 +26,7 @@ namespace Flappy
 		sf::Sprite _gameOverTitle;
 		sf::Sprite _gameOverContainer;
 		sf::Sprite _retryButton;
+		sf::Sprite _medal;
 
 		sf::Text _scoreText;
 		sf::Text _highScoreText;
