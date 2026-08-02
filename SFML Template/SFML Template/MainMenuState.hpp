@@ -23,5 +23,9 @@ namespace Flappy
 		sf::Sprite _background;
 		sf::Sprite _title;
 		sf::Sprite _playButton;
+
+		float _animationTime;
+		float _titleOriginalY;
+		float _titleOriginalX;
 	};
 }
