@@ -54,5 +54,8 @@ namespace Flappy
 		sf::Sound _wingSound;
 		sf::Sound _pointSound;
 
+		sf::Sprite _getReady;
+		sf::Sprite _message;
+
 	};
 }

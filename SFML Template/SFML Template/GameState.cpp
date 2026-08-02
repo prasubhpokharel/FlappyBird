@@ -39,12 +39,14 @@ namespace Flappy
 		this->_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		this->_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 		this->_data->assets.LoadTexture("Land", LAND_FILEPATH);
+		this->_data->assets.LoadTexture("Message", GET_READY_MESSAGE);
 		this->_data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
 		this->_data->assets.LoadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
 		this->_data->assets.LoadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
 		this->_data->assets.LoadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
 		this->_data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
 		this->_data->assets.LoadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
+		this->_data->assets.LoadTexture("Get Ready", GET_READY_FILEPATH);
 
 		pipe = new Pipe(_data);
 		land = new Land(_data);
@@ -53,6 +55,35 @@ namespace Flappy
 		hud = new HUD(_data);
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
+		_message.setTexture(this->_data->assets.GetTexture("Message"));
+		_getReady.setTexture(this->_data->assets.GetTexture("Get Ready"));
+
+		// Set scale first
+		_getReady.setScale(2.0f, 2.0f);
+		_message.setScale(2.2f, 2.2f);
+
+		// Set origin to center for easier positioning
+		_getReady.setOrigin(
+			_getReady.getLocalBounds().width / 2.0f,
+			_getReady.getLocalBounds().height / 2.0f
+		);
+
+		_message.setOrigin(
+			_message.getLocalBounds().width / 2.0f,
+			_message.getLocalBounds().height / 2.0f
+		);
+
+		// Position "Get Ready!" near the top half
+		_getReady.setPosition(
+			_data->window.getSize().x / 2.0f,
+			_data->window.getSize().y / 8.2f
+		);
+
+		// Position "Tap Tap" message in the lower center area, safely clear of the HUD score
+		_message.setPosition(
+			_data->window.getSize().x / 2.0f,
+			_data->window.getSize().y / 2.0f
+		);
 
 		_score = 0;
 		hud->UpdateScore(_score);
@@ -178,6 +209,11 @@ namespace Flappy
 		pipe->DrawPipes();
 		land->DrawLand();
 		bird->Draw();
+		if (_gameState == GameStates::eReady)
+		{
+			this->_data->window.draw(_getReady);
+			this->_data->window.draw(_message);
+		}
 
 		flash->Draw();
 
@@ -185,4 +221,4 @@ namespace Flappy
 
 		this->_data->window.display();
 	}
-}
+}	
