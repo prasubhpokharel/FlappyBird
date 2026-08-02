@@ -45,6 +45,7 @@ namespace Flappy
 		bool _flashOn;
 
 		int _score;
+		float _pipeSpeed;
 
 		sf::SoundBuffer _hitSoundBuffer;
 		sf::SoundBuffer _wingSoundBuffer;

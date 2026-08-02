@@ -15,7 +15,7 @@ namespace Flappy
 		void SpawnTopPipe();
 		void SpawnInvisiblePipe();
 		void SpawnScoringPipe();
-		void MovePipes(float dt);
+		void MovePipes(float dt, float speed);
 		void DrawPipes();
 		void RandomisePipeOffset();
 

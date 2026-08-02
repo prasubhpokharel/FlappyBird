@@ -48,7 +48,7 @@ namespace Flappy
 		scoringPipes.push_back(sprite);
 	}
 
-	void Pipe::MovePipes(float dt)
+	void Pipe::MovePipes(float dt, float speed)
 	{
 		for (int i = 0; i < pipeSprites.size(); i++)
 		{
@@ -59,7 +59,7 @@ namespace Flappy
 			else
 			{
 				sf::Vector2f position = pipeSprites.at(i).getPosition();
-				float movement = PIPE_MOVEMENT_SPEED * dt;
+				float movement = speed * dt;
 
 				pipeSprites.at(i).move(-movement, 0);
 			}
@@ -74,7 +74,7 @@ namespace Flappy
 			else
 			{
 				sf::Vector2f position = scoringPipes.at(i).getPosition();
-				float movement = PIPE_MOVEMENT_SPEED * dt;
+				float movement = speed * dt;
 
 				scoringPipes.at(i).move(-movement, 0);
 			}

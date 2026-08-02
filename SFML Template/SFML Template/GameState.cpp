@@ -86,6 +86,7 @@ namespace Flappy
 		);
 
 		_score = 0;
+		_pipeSpeed = PIPE_MOVEMENT_SPEED;
 		hud->UpdateScore(_score);
 
 		_gameState = GameStates::eReady;
@@ -125,7 +126,7 @@ namespace Flappy
 
 		if (GameStates::ePlaying == _gameState)
 		{
-			pipe->MovePipes(dt);
+			pipe->MovePipes(dt, _pipeSpeed);
 
 			if (clock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
 			{
@@ -178,6 +179,12 @@ namespace Flappy
 					if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f))
 					{
 						_score++;
+
+						if (_score % 5 == 0)
+						{
+							_pipeSpeed += 10.0f;
+						}
+
 
 						hud->UpdateScore(_score);
 
