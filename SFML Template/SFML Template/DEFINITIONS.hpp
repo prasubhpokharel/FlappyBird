@@ -35,6 +35,11 @@
 #define GAME_OVER_TITLE_FILEPATH "Resources/res/Game-Over-Title.png"
 #define GAME_OVER_BODY_FILEPATH "Resources/res/Game-Over-Body.png"
 
+#define HIT_SOUND_FILEPATH "Resources/audio/Hit.wav"
+#define POINT_SOUND_FILEPATH "Resources/audio/Point.wav"
+#define WING_SOUND_FILEPATH "Resources/audio/Wing.wav"
+
+
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.5f
 

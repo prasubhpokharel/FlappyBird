@@ -1,6 +1,8 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+
 #include "State.hpp"
 #include "Game.hpp"
 #include "Pipe.hpp"
@@ -43,6 +45,14 @@ namespace Flappy
 		bool _flashOn;
 
 		int _score;
+
+		sf::SoundBuffer _hitSoundBuffer;
+		sf::SoundBuffer _wingSoundBuffer;
+		sf::SoundBuffer _pointSoundBuffer;
+
+		sf::Sound _hitSound;
+		sf::Sound _wingSound;
+		sf::Sound _pointSound;
 
 	};
 }
