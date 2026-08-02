@@ -27,10 +27,13 @@ namespace Flappy
 		pipe = new Pipe(_data);
 		land = new Land(_data);
 		bird = new Bird(_data);
+		flash = new Flash(_data);
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
 
 		_gameState = GameStates::eReady;
+
+
 	}
 
 	void GameState::HandleInput()
@@ -100,6 +103,11 @@ namespace Flappy
 				}
 			}
 		}
+
+		if (GameStates::eGameOver == _gameState)
+		{
+			flash->Show(dt);
+		}
 	}
 
 	void GameState::Draw(float dt)
@@ -111,6 +119,8 @@ namespace Flappy
 		pipe->DrawPipes();
 		land->DrawLand();
 		bird->Draw();
+
+		flash->Draw();
 
 		this->_data->window.display();
 	}

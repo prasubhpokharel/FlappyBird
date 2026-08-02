@@ -7,6 +7,7 @@
 #include "Land.hpp"
 #include "Bird.hpp"
 #include "Collision.hpp"
+#include "Flash.hpp"
 
 namespace Flappy
 {
@@ -30,10 +31,14 @@ namespace Flappy
 		Land* land;
 		Bird* bird;
 		Collision collision;
+		Flash* flash;
 
 		sf::Clock clock;
 
 		int _gameState;
+
+		sf::RectangleShape _gameOverFlash;
+		bool _flashOn;
 
 	};
 }

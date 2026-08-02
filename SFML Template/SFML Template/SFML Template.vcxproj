@@ -153,6 +153,7 @@
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="Bird.cpp" />
     <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="Flash.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameOverState.cpp" />
     <ClCompile Include="GameState.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="Bird.hpp" />
     <ClInclude Include="Collision.hpp" />
     <ClInclude Include="DEFINITIONS.hpp" />
+    <ClInclude Include="Flash.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameOverState.hpp" />
     <ClInclude Include="GameState.hpp" />
