@@ -93,4 +93,10 @@ namespace Flappy
 		_movementClock.restart();
 		_birdState = BIRD_STATE_FLYING;
 	}
+
+	const sf::Sprite &Bird::GetSprite() const
+	{
+		return _birdSprite;
+	}
+
 }
