@@ -117,7 +117,7 @@ FlappyBird/
 
 ## License
 
-No license has been specified yet. Consider adding one — [MIT](https://choosealicense.com/licenses/mit/) is a common, permissive default — so others know how they're allowed to use the code.
+No license has been specified yet. 
 
 ## Author
 
