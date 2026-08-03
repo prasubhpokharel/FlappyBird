@@ -1,0 +1,26 @@
+<svg viewBox="0 0 1200 46" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+<defs>
+  <pattern id="grassHatchF" width="16" height="12" patternUnits="userSpaceOnUse">
+    <rect width="16" height="12" fill="transparent"/>
+    <path d="M0 12 L8 0" stroke="#4B3346" stroke-width="2" opacity="0.35"/>
+    <animateTransform attributeName="patternTransform" attributeType="XML" type="translate"
+      values="0,0;-16,0" dur="0.9s" repeatCount="indefinite" calcMode="linear"/>
+  </pattern>
+  <pattern id="sandDotsF" width="30" height="20" patternUnits="userSpaceOnUse">
+    <rect width="30" height="20" fill="transparent"/>
+    <rect x="4" y="6" width="4" height="3" fill="#CDC384" opacity="0.6"/>
+    <rect x="19" y="12" width="4" height="3" fill="#CDC384" opacity="0.6"/>
+    <animateTransform attributeName="patternTransform" attributeType="XML" type="translate"
+      values="0,0;-30,0" dur="2.4s" repeatCount="indefinite" calcMode="linear"/>
+  </pattern>
+  <clipPath id="fClip"><rect x="0" y="0" width="1200" height="46" rx="8"/></clipPath>
+</defs>
+<g clip-path="url(#fClip)">
+  <rect x="0" y="0" width="1200" height="46" fill="#DED895"/>
+  <rect x="0" y="0" width="1200" height="46" fill="url(#sandDotsF)"/>
+  <rect x="0" y="0" width="1200" height="10" fill="#73BF2E"/>
+  <rect x="0" y="0" width="1200" height="3" fill="#E4FD8B"/>
+  <rect x="0" y="0" width="1200" height="10" fill="url(#grassHatchF)"/>
+  <rect x="0" y="9" width="1200" height="2" fill="#4B3346" opacity="0.6"/>
+</g>
+</svg>
